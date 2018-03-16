@@ -17,8 +17,8 @@ public class Vista1 {
     public Vista1(){
         oper=new Operaciones();
     }
-    public int altaUsuario(String oro, String arma, int runas, int pociones,int lvl,String nombres, String apellidop, String apellidom, String username, String correo, String pass, int x, int y, int z, int w){
-        Direccion direccion = new Direccion(x,y,z,w);
+    public int altaUsuario(String oro, String arma, int runas, int pociones,int lvl,String nombres, String apellidop, String apellidom, String username, String correo, String pass, int calle, int no, int ciudad, int cp){
+        Direccion direccion = new Direccion(calle,no,ciudad,cp);
         oper.addDireccion(direccion);
         
         Nombre nombre = new Nombre(nombres,apellidop, apellidom);
