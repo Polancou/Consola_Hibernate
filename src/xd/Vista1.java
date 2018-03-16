@@ -3,10 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package vista;
+package xd;
 
+import pojos.Usuario;
+import pojos.Nombre;
+import pojos.Direccion;
+import pojos.InventarioUsuario;
+import pojos.Inventario;
 import controlador.Operaciones;
-import modelo.*;
 
 /**
  *

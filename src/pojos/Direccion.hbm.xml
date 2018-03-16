@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15-mar-2018 20:38:17 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="prueba_hibernate" name="pojos.Direccion" optimistic-lock="version" table="direccion">
+    <id name="id" type="java.lang.Integer">
+      <column name="id"/>
+      <generator class="identity"/>
+    </id>
+    <property name="calle" type="int">
+      <column name="calle" not-null="true"/>
+    </property>
+    <property name="no" type="int">
+      <column name="no" not-null="true"/>
+    </property>
+    <property name="ciudad" type="int">
+      <column name="ciudad" not-null="true"/>
+    </property>
+    <property name="cp" type="int">
+      <column name="cp" not-null="true"/>
+    </property>
+    <set fetch="select" inverse="true" lazy="true" name="usuarios" table="usuario">
+      <key>
+        <column name="direccion" not-null="true"/>
+      </key>
+      <one-to-many class="pojos.Usuario"/>
+    </set>
+  </class>
+</hibernate-mapping>

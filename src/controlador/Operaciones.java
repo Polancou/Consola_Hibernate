@@ -4,17 +4,14 @@
  * and open the template in the editor.
  */
 package controlador;
-import java.math.BigDecimal;
-import java.util.Iterator;
-import java.util.List;
-import javax.swing.DefaultComboBoxModel;
-import javax.swing.DefaultListModel;
-import javax.swing.JOptionPane;
-import org.hibernate.Query;
+import pojos.Usuario;
+import pojos.Nombre;
+import pojos.Direccion;
+import pojos.InventarioUsuario;
+import pojos.Inventario;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import modelo.*;
 
 /**
  *

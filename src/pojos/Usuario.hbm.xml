@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15-mar-2018 20:38:17 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="prueba_hibernate" name="pojos.Usuario" optimistic-lock="version" table="usuario">
+    <id name="id" type="java.lang.Integer">
+      <column name="id"/>
+      <generator class="identity"/>
+    </id>
+    <many-to-one class="pojos.Direccion" fetch="select" name="direccion">
+      <column name="direccion" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="pojos.Nombre" fetch="select" name="nombre">
+      <column name="nombre" not-null="true"/>
+    </many-to-one>
+    <property name="username" type="string">
+      <column name="username" not-null="true"/>
+    </property>
+    <property name="correo" type="string">
+      <column name="correo" not-null="true"/>
+    </property>
+    <property name="pass" type="string">
+      <column name="pass" not-null="true"/>
+    </property>
+    <set fetch="select" inverse="true" lazy="true" name="inventarioUsuarios" table="inventario_usuario">
+      <key>
+        <column name="usuario" not-null="true"/>
+      </key>
+      <one-to-many class="pojos.InventarioUsuario"/>
+    </set>
+  </class>
+</hibernate-mapping>

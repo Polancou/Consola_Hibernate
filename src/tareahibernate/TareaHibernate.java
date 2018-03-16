@@ -6,7 +6,7 @@
 package tareahibernate;
 
 import java.util.Scanner;
-import vista.Vista1;
+import xd.Vista1;
 
 
 

@@ -45,10 +45,10 @@ Contributor(s):
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/prueba_hibernate</property>
     <property name="hibernate.connection.username">root</property>
-    <mapping resource="modelo/InventarioUsuario.hbm.xml"/>
-    <mapping resource="modelo/Nombre.hbm.xml"/>
-    <mapping resource="modelo/Direccion.hbm.xml"/>
-    <mapping resource="modelo/Inventario.hbm.xml"/>
-    <mapping resource="modelo/Usuario.hbm.xml"/>
+    <mapping resource="pojos/InventarioUsuario.hbm.xml"/>
+    <mapping resource="pojos/Nombre.hbm.xml"/>
+    <mapping resource="pojos/Direccion.hbm.xml"/>
+    <mapping resource="pojos/Inventario.hbm.xml"/>
+    <mapping resource="pojos/Usuario.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>
