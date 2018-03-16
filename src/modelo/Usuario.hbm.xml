@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15-mar-2018 20:38:17 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="modelo.Usuario" table="usuario" catalog="prueba_hibernate" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="direccion" class="modelo.Direccion" fetch="select">
+            <column name="direccion" not-null="true" />
+        </many-to-one>
+        <many-to-one name="nombre" class="modelo.Nombre" fetch="select">
+            <column name="nombre" not-null="true" />
+        </many-to-one>
+        <property name="username" type="string">
+            <column name="username" not-null="true" />
+        </property>
+        <property name="correo" type="string">
+            <column name="correo" not-null="true" />
+        </property>
+        <property name="pass" type="string">
+            <column name="pass" not-null="true" />
+        </property>
+        <set name="inventarioUsuarios" table="inventario_usuario" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="usuario" not-null="true" />
+            </key>
+            <one-to-many class="modelo.InventarioUsuario" />
+        </set>
+    </class>
+</hibernate-mapping>
