@@ -58,7 +58,5 @@ public class TareaHibernate {
         int v = vista.altaUsuario(oro, arma, runas, pociones, lvl, nombres, apellidop, apellidom, username, correo, pass, calle, no, ciudad, cp);
         System.out.println("Registrado, eres "+username+" tu nivel es "+lvl+" y tu ID es "+v);
         System.exit(0);
-    }
-    
-    
+    } 
 }
